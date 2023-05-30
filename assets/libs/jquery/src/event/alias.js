@@ -1,4 +1,4 @@
-define(["core", "event", "./trigger"], function (jQuery) {
+define(["/core", "/event", "./trigger"], function (jQuery) {
   "use strict";
 
   jQuery.each(

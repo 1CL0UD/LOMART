@@ -1,4 +1,4 @@
-define(["var/document", "var/support"], function (document, support) {
+define(["/var/document", "/var/support"], function (document, support) {
   "use strict";
 
   // Support: Safari 8 only

@@ -1,4 +1,4 @@
-define(["core", "event"], function (jQuery) {
+define(["/core", "/event"], function (jQuery) {
   "use strict";
 
   // Attach a bunch of functions for handling common AJAX events

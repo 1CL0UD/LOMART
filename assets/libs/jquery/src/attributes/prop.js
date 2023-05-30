@@ -1,4 +1,4 @@
-define(["core", "core/access", "./support", "selector"], function (
+define(["/core", "/core/access", "./support", "/selector"], function (
   jQuery,
   access,
   support

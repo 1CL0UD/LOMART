@@ -1,6 +1,6 @@
 {
   "plugins": ["html"],
-  "extends": ".eslintrc.json",
+  "extends": "/../../.eslintrc.json",
   "parserOptions": {
     "sourceType": "module"
   },

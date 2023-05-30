@@ -1,4 +1,4 @@
-define(["core"], function (jQuery, noGlobal) {
+define(["/core"], function (jQuery, noGlobal) {
   "use strict";
 
   var // Map over jQuery in case of overwrite

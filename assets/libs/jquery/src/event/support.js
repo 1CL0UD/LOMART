@@ -1,4 +1,4 @@
-define(["var/support"], function (support) {
+define(["/var/support"], function (support) {
   "use strict";
 
   support.focusin = "onfocusin" in window;

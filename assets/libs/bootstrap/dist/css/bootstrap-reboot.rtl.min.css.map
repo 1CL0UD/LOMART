@@ -1,13 +1,13 @@
 {
   "version": 3,
   "sources": [
-    "scss/mixins/_banner.scss",
-    "scss/_root.scss",
+    "/../scss/mixins/_banner.scss",
+    "/../scss/_root.scss",
     "dist/css/bootstrap-reboot.rtl.css",
-    "scss/vendor/_rfs.scss",
-    "scss/mixins/_color-mode.scss",
-    "scss/_reboot.scss",
-    "scss/mixins/_border-radius.scss",
+    "/../scss/vendor/_rfs.scss",
+    "/../scss/mixins/_color-mode.scss",
+    "/../scss/_reboot.scss",
+    "/../scss/mixins/_border-radius.scss",
     "bootstrap-reboot.css"
   ],
   "names": [],

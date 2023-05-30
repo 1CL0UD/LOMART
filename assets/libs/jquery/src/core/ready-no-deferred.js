@@ -1,4 +1,4 @@
-define(["core", "var/document", "var/isFunction"], function (
+define(["/core", "/var/document", "/var/isFunction"], function (
   jQuery,
   document,
   isFunction

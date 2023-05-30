@@ -1,4 +1,4 @@
-define(["core", "selector"], function (jQuery) {
+define(["/core", "/selector"], function (jQuery) {
   "use strict";
 
   jQuery.expr.pseudos.hidden = function (elem) {

@@ -1,8 +1,8 @@
-define(["core", "data/var/dataPriv", "css/var/isHiddenWithinTree"], function (
-  jQuery,
-  dataPriv,
-  isHiddenWithinTree
-) {
+define([
+  "/core",
+  "/data/var/dataPriv",
+  "/css/var/isHiddenWithinTree",
+], function (jQuery, dataPriv, isHiddenWithinTree) {
   "use strict";
 
   var defaultDisplayMap = {};

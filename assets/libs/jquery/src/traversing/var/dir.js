@@ -1,4 +1,4 @@
-define(["core"], function (jQuery) {
+define(["/../core"], function (jQuery) {
   "use strict";
 
   return function (elem, dir, until) {

@@ -1,4 +1,7 @@
-define(["core", "css/finalPropName", "css"], function (jQuery, finalPropName) {
+define(["/core", "/css/finalPropName", "/css"], function (
+  jQuery,
+  finalPropName
+) {
   "use strict";
 
   function Tween(elem, options, prop, end, easing) {

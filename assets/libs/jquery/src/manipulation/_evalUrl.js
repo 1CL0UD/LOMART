@@ -1,4 +1,4 @@
-define(["ajax"], function (jQuery) {
+define(["/ajax"], function (jQuery) {
   "use strict";
 
   jQuery._evalUrl = function (url, options) {

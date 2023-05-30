@@ -1,4 +1,4 @@
-define(["core", "core/nodeName"], function (jQuery, nodeName) {
+define(["/core", "/core/nodeName"], function (jQuery, nodeName) {
   "use strict";
 
   function getAll(context, tag) {

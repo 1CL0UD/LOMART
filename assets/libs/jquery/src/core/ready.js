@@ -1,7 +1,9 @@
-define(["core", "var/document", "core/readyException", "deferred"], function (
-  jQuery,
-  document
-) {
+define([
+  "/core",
+  "/var/document",
+  "/core/readyException",
+  "/deferred",
+], function (jQuery, document) {
   "use strict";
 
   // The deferred used on DOM ready

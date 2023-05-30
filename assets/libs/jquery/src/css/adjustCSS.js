@@ -1,4 +1,4 @@
-define(["core", "var/rcssNum"], function (jQuery, rcssNum) {
+define(["/core", "/var/rcssNum"], function (jQuery, rcssNum) {
   "use strict";
 
   function adjustCSS(elem, prop, valueParts, tween) {

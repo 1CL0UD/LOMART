@@ -1,4 +1,4 @@
-define(["core"], function (jQuery) {
+define(["/core"], function (jQuery) {
   "use strict";
 
   // Register as a named AMD module, since jQuery can be concatenated with other

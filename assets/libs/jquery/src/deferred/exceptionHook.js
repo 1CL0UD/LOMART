@@ -1,4 +1,4 @@
-define(["core", "deferred"], function (jQuery) {
+define(["/core", "/deferred"], function (jQuery) {
   "use strict";
 
   // These usually indicate a programmer mistake during development,

@@ -1,4 +1,4 @@
-define(["core", "selector", "effects"], function (jQuery) {
+define(["/core", "/selector", "/effects"], function (jQuery) {
   "use strict";
 
   jQuery.expr.pseudos.animated = function (elem) {

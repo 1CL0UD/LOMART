@@ -1,4 +1,4 @@
-define(["core"], function (jQuery) {
+define(["/core"], function (jQuery) {
   "use strict";
 
   // Cross-browser xml parsing

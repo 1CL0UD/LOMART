@@ -2,9 +2,9 @@
   "version": 3,
   "file": "simplebar-core.esm.js",
   "sources": [
-    "src/helpers.js",
-    "src/scrollbar-width.js",
-    "src/simplebar.js"
+    "/src/helpers.js",
+    "/src/scrollbar-width.js",
+    "/src/simplebar.js"
   ],
   "sourcesContent": [
     "// Helper function to retrieve options from element attributes\nexport const getOptions = function(obj) {\n  const options = Array.prototype.reduce.call(\n    obj,\n    (acc, attribute) => {\n      const option = attribute.name.match(/data-simplebar-(.+)/);\n      if (option) {\n        const key = option[1].replace(/\\W+(.)/g, (x, chr) => chr.toUpperCase());\n        switch (attribute.value) {\n          case 'true':\n            acc[key] = true;\n            break;\n          case 'false':\n            acc[key] = false;\n            break;\n          case undefined:\n            acc[key] = true;\n            break;\n          default:\n            acc[key] = attribute.value;\n        }\n      }\n      return acc;\n    },\n    {}\n  );\n  return options;\n};\n\nexport function getElementWindow(element) {\n  if (\n    !element ||\n    !element.ownerDocument ||\n    !element.ownerDocument.defaultView\n  ) {\n    return window;\n  }\n  return element.ownerDocument.defaultView;\n}\n\nexport function getElementDocument(element) {\n  if (!element || !element.ownerDocument) {\n    return document;\n  }\n  return element.ownerDocument;\n}\n",

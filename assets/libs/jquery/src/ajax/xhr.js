@@ -1,4 +1,4 @@
-define(["core", "var/support", "ajax"], function (jQuery, support) {
+define(["/core", "/var/support", "/ajax"], function (jQuery, support) {
   "use strict";
 
   jQuery.ajaxSettings.xhr = function () {
