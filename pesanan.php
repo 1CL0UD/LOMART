@@ -68,7 +68,7 @@
       <div class="container-fluid">
         <!--  Row 1 -->
         <div class="row">
-          <h4 class="fw-bold mb-4">Dashboard</h4>
+          <h4 class="fw-bold mb-4">Pesanan</h4>
           <!-- Sales Overview Used to be Here -->
           <?php
           include "conn.php";
@@ -169,11 +169,12 @@
           <?php
           }
           ?>
-        <?php
-        include "conn.php";
-        $query_mysql = mysqli_query($mysqli, "SELECT * FROM pesanan");
-        ?>
+
         <div class="row">
+          <?php
+          include "conn.php";
+          $query_mysql = mysqli_query($mysqli, "SELECT * FROM pesanan");
+          ?>
           <div class="col-lg-10 d-flex align-items-stretch">
             <div class="card w-100">
               <div class="card-body p-4">

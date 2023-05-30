@@ -22,6 +22,7 @@
       ?>
     <!-- End Sidebar scroll-->
 
+    <!--  Sidebar End -->
     <!--  Main wrapper -->
     <div class="body-wrapper">
       <!--  Header Start -->
@@ -39,9 +40,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                   aria-expanded="false">
-                  <span class="material-symbols-outlined">
-                    notifications
-                  </span>
+                  <i class="ti ti-bell-ringing"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
@@ -69,7 +68,7 @@
       <div class="container-fluid">
         <!--  Row 1 -->
         <div class="row">
-          <h4 class="fw-bold mb-4">Dashboard</h4>
+          <h4 class="fw-bold mb-4">Pesanan</h4>
           <!-- Sales Overview Used to be Here -->
           <?php
           include "conn.php";
@@ -170,11 +169,11 @@
           <?php
           }
           ?>
+        <?php
+        include "conn.php";
+        $query_mysql = mysqli_query($mysqli, "SELECT * FROM pesanan");
+        ?>
         <div class="row">
-          <?php
-          include "conn.php";
-          $query_mysql = mysqli_query($mysqli, "SELECT * FROM pesanan");
-          ?>
           <div class="col-lg-10 d-flex align-items-stretch">
             <div class="card w-100">
               <div class="card-body p-4">
@@ -185,9 +184,6 @@
                       <tr>
                         <th class="border-bottom-0">
                           <h6 class="fw-semibold mb-0">No</h6>
-                        </th>
-                        <th class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">Nama Customer</h6>
                         </th>
                         <th class="border-bottom-0">
                           <h6 class="fw-semibold mb-0">Pesanan</h6>
@@ -205,11 +201,6 @@
                           <td class="border-bottom-0">
                             <h6 class="fw-semibold mb-0">
                               <?php echo $data['id_pesanan']; ?>
-                            </h6>
-                          </td>
-                          <td class="border-bottom-0">
-                            <h6 class="fw-semibold mb-1">
-                              <?php echo $data['nama_customer']; ?>
                             </h6>
                           </td>
                           <td class="border-bottom-0">
@@ -236,14 +227,6 @@
             </div>
           </div>
           <!-- Recent-transaction-dots used to be here -->
-        </div>
-        <div class="py-6 px-6 text-center">
-          <p class="mb-0 fs-4">
-            Design and Developed by
-            <a href="" target="_blank" class="pe-1 text-primary text-decoration-underline">Kelompok 1 ADSI
-              Kelas A</a>
-            Distributed by <a href="https://themewagon.com">ThemeWagon</a>
-          </p>
         </div>
       </div>
     </div>
