@@ -168,13 +168,13 @@
           ?>
         <?php
         include "conn.php";
-        $query_mysql = mysqli_query($mysqli, "SELECT * FROM pesanan");
+        $query_mysql = mysqli_query($mysqli, "SELECT * FROM progress_pesanan");
         ?>
         <div class="row">
           <div class="col-lg-10 d-flex align-items-stretch">
             <div class="card w-100">
               <div class="card-body p-4">
-                <h5 class="card-title fw-semibold mb-4">Pesanan Saya</h5>
+                <h5 class="card-title fw-semibold mb-4">Pesanan Sekarang</h5>
                 <div class="table-responsive">
                   <table class="table text-nowrap mb-0 align-middle">
                     <thead class="text-dark fs-4">
@@ -186,7 +186,10 @@
                           <h6 class="fw-semibold mb-0">Pesanan</h6>
                         </th>
                         <th class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">Jumlah</h6>
+                          <h6 class="fw-semibold mb-0">Hari</h6>
+                        </th>
+                        <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">Detail</h6>
                         </th>
                       </tr>
                     </thead>
@@ -197,22 +200,29 @@
                         <tr>
                           <td class="border-bottom-0">
                             <h6 class="fw-semibold mb-0">
-                              <?php echo $data['id_pesanan']; ?>
+                              <?php echo $data['id_progress']; ?>
                             </h6>
                           </td>
+
                           <td class="border-bottom-0">
                             <h6 class="fw-semibold mb-1">
                               <?php echo $data['pesanan']; ?>
                             </h6>
-                            <span class="fw-normal">
+                          </td>
+                          <td class="border-bottom-0">
+                            <h6 class="fw-semibold mb-1">
                               <?php echo $data['hari']; ?>
-                            </span>
+                            </h6>
                           </td>
                           <td class="border-bottom-0">
                             <div class="d-flex align-items-center gap-2">
-                              <span class="fw-normal">Rp
-                                <?php echo $data['jumlah']; ?>
-                              </span>
+                              <form action="status-popup.php" method="POST">
+                                <input type="hidden" name="dua" id="dua"
+                                  value="<?php echo $data['id_progress'] ?>"></input>
+                                <input type="submit" class="btn btn-primary" value="Detail"></input>
+
+                              </form>
+
                             </div>
                           </td>
                         </tr>
