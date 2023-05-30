@@ -22,6 +22,7 @@
       ?>
     <!-- End Sidebar scroll-->
 
+    <!--  Sidebar End -->
     <!--  Main wrapper -->
     <div class="body-wrapper">
       <!--  Header Start -->
@@ -39,9 +40,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                   aria-expanded="false">
-                  <span class="material-symbols-outlined">
-                    notifications
-                  </span>
+                  <i class="ti ti-bell-ringing"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
@@ -83,9 +82,12 @@
                     <div class="row alig n-items-start">
                       <div class="col-8">
                         <h5 class="card-title mb-9 fw-semibold">Cuci</h5>
-                        <h6 class="fw-semibold mb-3">
-                          Pesan Disini
-                        </h6>
+                        <h4 class="fw-semibold mb-3">
+                          <?php
+                          $num = $data['cuci'];
+                          echo number_format((float) $num, 2, '.', '');
+                          ?> %
+                        </h4>
                       </div>
                       <div class="col-4">
                         <div class="d-flex justify-content-end">
@@ -110,9 +112,12 @@
                     <div class="row alig n-items-start">
                       <div class="col-8">
                         <h5 class="card-title mb-9 fw-semibold">Setrika</h5>
-                        <h6 class="fw-semibold mb-3">
-                          Pesan Disini
-                        </h6>
+                        <h4 class="fw-semibold mb-3">
+                          <?php
+                          $num = $data['setrika'];
+                          echo number_format((float) $num, 2, '.', '');
+                          ?> %
+                        </h4>
                       </div>
                       <div class="col-4">
                         <div class="d-flex justify-content-end">
@@ -138,9 +143,12 @@
                         <h5 class="card-title mb-9 fw-semibold">
                           Cuci & Setrika
                         </h5>
-                        <h6 class="fw-semibold mb-3">
-                          Pesan Disini
-                        </h6>
+                        <h4 class="fw-semibold mb-3">
+                          <?php
+                          $num = $data['cuci_setrika'];
+                          echo number_format((float) $num, 2, '.', '');
+                          ?> %
+                        </h4>
                       </div>
                       <div class="col-4">
                         <div class="d-flex justify-content-end">
@@ -161,85 +169,15 @@
           <?php
           }
           ?>
-        <div class="row">
-          <div class="col-lg-10 d-flex align-items-stretch">
-            <div class="card w-100">
-              <div class="card-body p-4">
-                <h5 class="card-title fw-semibold mb-4">
-                  Gratis Ongkir & Voucher
-                </h5>
-                <?php
-                include "conn.php";
-                $query_mysql = mysqli_query($mysqli, "SELECT * FROM voucher");
-                ?>
-
-                <div class="table-responsive">
-                  <table class="table text-nowrap mb-0 align-middle">
-                    <thead class="text-dark fs-4">
-                      <tr>
-                        <th class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">Id</h6>
-                        </th>
-                        <th class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">Voucher</h6>
-                        </th>
-                        <th class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">Jumlah</h6>
-                        </th>
-                        <th class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">Klaim</h6>
-                        </th>
-                      </tr>
-                    </thead>
-                    <?php
-                    while ($data = mysqli_fetch_array($query_mysql)) {
-                      ?>
-                      <tbody>
-                        <tr>
-                          <td class="border-bottom-0">
-                            <h6 class="fw-semibold mb-0">
-                              <?php echo $data['id_voucher']; ?>
-                            </h6>
-                          </td>
-                          <td class="border-bottom-0">
-                            <h6 class="fw-semibold mb-1">
-                              <?php echo $data['voucher']; ?>
-                            </h6>
-                            <span class="fw-normal">
-                              <?php echo $data['sisa_hari']; ?>
-                            </span>
-                          </td>
-                          <td class="border-bottom-0">
-                            <p class="mb-0 fw-normal">
-                              <?php echo $data['jumlah']; ?>
-                            </p>
-                          </td>
-                          <td class="border-bottom-0">
-                            <div class="d-flex align-items-center gap-2">
-                              <span class="badge bg-primary rounded-3 fw-semibold">Klaim</span>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                      <?php
-                    }
-                    ?>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Recent-transaction-dots used to be here -->
-        </div>
         <?php
         include "conn.php";
-        $query_mysql = mysqli_query($mysqli, "SELECT * FROM riwayat_pesanan");
+        $query_mysql = mysqli_query($mysqli, "SELECT * FROM pesanan");
         ?>
         <div class="row">
           <div class="col-lg-10 d-flex align-items-stretch">
             <div class="card w-100">
               <div class="card-body p-4">
-                <h5 class="card-title fw-semibold mb-4">Riwayat Pesanan</h5>
+                <h5 class="card-title fw-semibold mb-4">Pesanan Saya</h5>
                 <div class="table-responsive">
                   <table class="table text-nowrap mb-0 align-middle">
                     <thead class="text-dark fs-4">
@@ -262,7 +200,7 @@
                         <tr>
                           <td class="border-bottom-0">
                             <h6 class="fw-semibold mb-0">
-                              <?php echo $data['id_riwayat_pesanan']; ?>
+                              <?php echo $data['id_pesanan']; ?>
                             </h6>
                           </td>
                           <td class="border-bottom-0">
@@ -289,14 +227,6 @@
             </div>
           </div>
           <!-- Recent-transaction-dots used to be here -->
-        </div>
-        <div class="py-6 px-6 text-center">
-          <p class="mb-0 fs-4">
-            Design and Developed by
-            <a href="https://adminmart.com/" target="_blank"
-              class="pe-1 text-primary text-decoration-underline">AdminMart.com</a>
-            Distributed by <a href="https://themewagon.com">ThemeWagon</a>
-          </p>
         </div>
       </div>
     </div>
