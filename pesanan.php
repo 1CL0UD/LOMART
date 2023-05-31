@@ -178,7 +178,7 @@
           <div class="col-lg-10 d-flex align-items-stretch">
             <div class="card w-100">
               <div class="card-body p-4">
-                <h5 class="card-title fw-semibold mb-4">Pesanan Saya</h5>
+                <h5 class="card-title fw-semibold mb-4">Riwayat Pesanan</h5>
                 <div class="table-responsive">
                   <table class="table text-nowrap mb-0 align-middle">
                     <thead class="text-dark fs-4">

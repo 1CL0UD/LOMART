@@ -72,7 +72,7 @@
           <!-- Sales Overview Used to be Here -->
           <?php
           include "conn.php";
-          $query_mysql = mysqli_query($mysqli, "SELECT * FROM progress_pesanan WHERE id_progress=1");
+          $query_mysql = mysqli_query($mysqli, "SELECT * FROM pesanan WHERE id_pesanan=1");
           while ($data = mysqli_fetch_array($query_mysql)) { ?>
             <div class="col-sm-4 col-lg-3">
               <!-- Cuci -->
@@ -84,7 +84,7 @@
                         <h5 class="card-title mb-9 fw-semibold">Cuci</h5>
                         <h4 class="fw-semibold mb-3">
                           <?php
-                          echo $data['cuci'];
+                          echo $data['prog_cuci'];
                           ?> %
                         </h4>
                       </div>
@@ -113,7 +113,7 @@
                         <h5 class="card-title mb-9 fw-semibold">Setrika</h5>
                         <h4 class="fw-semibold mb-3">
                           <?php
-                          echo $data['setrika'];
+                          echo $data['prog_setrika'];
                           ?> %
                         </h4>
                       </div>
@@ -143,7 +143,7 @@
                         </h5>
                         <h4 class="fw-semibold mb-3">
                           <?php
-                          echo $data['pengiriman'];
+                          echo $data['prog_kirim'];
                           ?> %
                         </h4>
                       </div>
@@ -168,7 +168,7 @@
           ?>
         <?php
         include "conn.php";
-        $query_mysql = mysqli_query($mysqli, "SELECT * FROM progress_pesanan");
+        $query_mysql = mysqli_query($mysqli, "SELECT * FROM pesanan");
         ?>
         <div class="row">
           <div class="col-lg-10 d-flex align-items-stretch">
@@ -200,7 +200,7 @@
                         <tr>
                           <td class="border-bottom-0">
                             <h6 class="fw-semibold mb-0">
-                              <?php echo $data['id_progress']; ?>
+                              <?php echo $data['id_pesanan']; ?>
                             </h6>
                           </td>
 
@@ -208,6 +208,9 @@
                             <h6 class="fw-semibold mb-1">
                               <?php echo $data['pesanan']; ?>
                             </h6>
+                            <p class="h8">
+                              <?php echo $data['nama_customer']; ?>
+                            </p>
                           </td>
                           <td class="border-bottom-0">
                             <h6 class="fw-semibold mb-1">
@@ -217,8 +220,15 @@
                           <td class="border-bottom-0">
                             <div class="d-flex align-items-center gap-2">
                               <form action="status-popup.php" method="POST">
-                                <input type="hidden" name="dua" id="dua"
-                                  value="<?php echo $data['id_progress'] ?>"></input>
+                                <input type="hidden" name="dua" value="<?php echo $data['id_pesanan'] ?>"></input>
+                                <input type="hidden" name="nama" value="<?php echo $data['nama_customer'] ?>"></input>
+                                <input type="hidden" name="pesanan" value="<?php echo $data['pesanan'] ?>"></input>
+                                <input type="hidden" name="hari" value="<?php echo $data['hari'] ?>"></input>
+                                <input type="hidden" name="jumlah" value="<?php echo $data['jumlah'] ?>"></input>
+                                <input type="hidden" name="cuci" value="<?php echo $data['prog_cuci'] ?>"></input>
+                                <input type="hidden" name="setrika" value="<?php echo $data['prog_setrika'] ?>"></input>
+                                <input type="hidden" name="kirim" value="<?php echo $data['prog_kirim'] ?>"></input>
+                                <input type="hidden" name="mc" value="<?php echo $data['kode_mc'] ?>"></input>
                                 <input type="submit" class="btn btn-primary" value="Detail"></input>
 
                               </form>

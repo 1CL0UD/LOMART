@@ -233,7 +233,7 @@
         </div>
         <?php
         include "conn.php";
-        $query_mysql = mysqli_query($mysqli, "SELECT * FROM riwayat_pesanan");
+        $query_mysql = mysqli_query($mysqli, "SELECT * FROM pesanan");
         ?>
         <div class="row">
           <div class="col-lg-10 d-flex align-items-stretch">
@@ -262,7 +262,7 @@
                         <tr>
                           <td class="border-bottom-0">
                             <h6 class="fw-semibold mb-0">
-                              <?php echo $data['id_riwayat_pesanan']; ?>
+                              <?php echo $data['id_pesanan']; ?>
                             </h6>
                           </td>
                           <td class="border-bottom-0">
