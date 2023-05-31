@@ -16,7 +16,7 @@
     $username = $_POST['lin_un'];
     $password = $_POST['lin_pass'];
 
-    $query = mysqli_query($mysqli, "SELECT * FROM kasir where username='$username' and password='$password'");
+    $query = mysqli_query($mysqli, "SELECT * FROM kepala_cabang where nama_kc='$username' and pass_kc='$password'");
 
     $cek = mysqli_num_rows($query);
 
