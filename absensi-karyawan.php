@@ -18,7 +18,7 @@
 
     <!-- Sidebar scroll-->
     <?php
-    include 'left-sidebar.php'
+    include 'left-sidebar-kc.php'
       ?>
     <!-- End Sidebar scroll-->
 
@@ -69,7 +69,7 @@
       <div class="container-fluid">
         <!--  Row 1 -->
         <div class="row">
-          <h4 class="fw-bold mb-4">Dashboard</h4>
+          <h4 class="fw-bold mb-4">Kehadiran</h4>
           <!-- Sales Overview Used to be Here -->
           <?php
           include "conn.php";
@@ -77,61 +77,49 @@
           while ($data = mysqli_fetch_array($query_mysql)) { ?>
             <div class="col-sm-4 col-lg-3">
               <!-- Cuci -->
-
-              <div class="card">
-                <a href="">
+              <a href="">
+                <div class="card">
                   <div class="card-body">
-                    <div class="row align n-items-start">
+                    <div class="row alig n-items-start">
                       <div class="col-8">
                         <h5 class="card-title mb-9 fw-semibold">Cuci</h5>
-                        <a href="order-cust.php">
-                          <h6 class="fw-semibold mb-3">
-                            Pesan Disini
-                          </h6>
-                        </a>
                       </div>
                       <div class="col-4">
                         <div class="d-flex justify-content-end">
                           <div
                             class="text-white bg-secondary rounded-circle p-6 d-flex align-items-center justify-content-center">
                             <span class="material-symbols-outlined">
-                              local_laundry_service
+                              person
                             </span>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </a>
-              </div>
-
+                </div>
+              </a>
             </div>
             <div class="col-sm-4 col-lg-3">
               <!-- Setrika -->
-
-              <div class="card">
-                <div class="card-body">
-                  <div class="row alig n-items-start">
-                    <div class="col-8">
-                      <h5 class="card-title mb-9 fw-semibold">Setrika</h5>
-                      <a href="order-cust.php">
-                        <h6 class="fw-semibold mb-3">
-                          Pesan Disini
-                        </h6>
-                      </a>
-                    </div>
-                    <div class="col-4">
-                      <div class="d-flex justify-content-end">
-                        <div
-                          class="text-white bg-secondary rounded-circle p-6 d-flex align-items-center justify-content-center">
-                          <span class="material-symbols-outlined"> iron </span>
+              <a href="">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row alig n-items-start">
+                      <div class="col-8">
+                        <h5 class="card-title mb-9 fw-semibold">Setrika</h5>
+                      </div>
+                      <div class="col-4">
+                        <div class="d-flex justify-content-end">
+                          <div
+                            class="text-white bg-secondary rounded-circle p-6 d-flex align-items-center justify-content-center">
+                            <span class="material-symbols-outlined"> person </span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-
+              </a>
             </div>
 
             <div class="col-sm-4 col-lg-3">
@@ -144,18 +132,13 @@
                         <h5 class="card-title mb-9 fw-semibold">
                           Cuci & Setrika
                         </h5>
-                        <a href="order-cust.php">
-                          <h6 class="fw-semibold mb-3">
-                            Pesan Disini
-                          </h6>
-                        </a>
                       </div>
                       <div class="col-4">
                         <div class="d-flex justify-content-end">
                           <div
                             class="text-white bg-secondary rounded-circle p-6 d-flex align-items-center justify-content-center">
                             <span class="material-symbols-outlined">
-                              styler
+                              person
                             </span>
                           </div>
                         </div>

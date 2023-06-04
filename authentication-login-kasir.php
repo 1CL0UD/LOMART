@@ -24,10 +24,10 @@ include "conn.php";
           <div class="col-md-8 col-lg-6 col-xxl-3">
             <div class="card mb-0">
               <div class="card-body">
-                <a href="index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
+                <a href="index.php" class="text-nowrap logo-img text-center d-block py-3 w-100">
                   <img src="assets/images/logos/logo-LOMART.png" width="180" alt="" />
                 </a>
-                <p class="text-center">Fresh Fast Clean</p>
+                <p class="text-center">Kasir</p>
                 <form action="login-kasir.php" method="POST">
                   <div class="mb-3">
                     <label for="lin_un" class="form-label">Enter Your Username</label>

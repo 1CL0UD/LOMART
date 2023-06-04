@@ -3,7 +3,7 @@
   <!-- Sidebar scroll-->
   <div>
     <div class="brand-logo d-flex align-items-center justify-content-between">
-      <a href="index.html" class="text-nowrap logo-img">
+      <a href="index-kc.html" class="text-nowrap logo-img">
         <img src="assets/images/logos/logo-LOMART.png" width="230" alt="" />
       </a>
       <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -18,7 +18,7 @@
           <span class="hide-menu">Home</span>
         </li>
         <li class="sidebar-item">
-          <a class="sidebar-link" href="index-kasir.php" aria-expanded="false">
+          <a class="sidebar-link" href="index-kc.php" aria-expanded="false">
             <span class="material-symbols-outlined">
               dashboard
             </span>
@@ -26,19 +26,19 @@
           </a>
         </li>
         <li class="sidebar-item">
-          <a class="sidebar-link" href="pesanan-kasir.php" aria-expanded="false">
-            <span class="material-symbols-outlined">
-              local_laundry_service
-            </span>
-            <span class="hide-menu">Pesanan</span>
-          </a>
-        </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="riwayat-pesanan-kasir.php" aria-expanded="false">
+          <a class="sidebar-link" href="riwayat-pesanan-kc.php" aria-expanded="false">
             <span class="material-symbols-outlined">
               history
             </span>
-            <span class="hide-menu">Riwayat Pesanan</span>
+            <span class="hide-menu">Riwayat Transaksi</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="absensi-karyawan.php" aria-expanded="false">
+            <span class="material-symbols-outlined">
+              calendar_month
+            </span>
+            <span class="hide-menu">Absensi Karyawan</span>
           </a>
         </li>
         <li class="nav-small-cap">
@@ -135,11 +135,11 @@
                     <img src="assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle" />
                   </span>
 
-                  <span class="hide-menu">Kasir</span>
+                  <span class="hide-menu">Kepala Cabang</span>
                 </a>
               </div>
               <div class="col-sm mt-3">
-                <a href="authentication-login-kasir.php">
+                <a href="authentication-login-kc.php">
                   <span class="material-symbols-outlined">
                     logout
                   </span>
